@@ -33,7 +33,7 @@
 
 using namespace folly;
 
-static constexpr std::size_t kTooBig = folly::constexpr_max<std::size_t>(
+static constexpr std::size_t kTooBig = folly::constexpr_max(
     std::size_t{std::numeric_limits<uint32_t>::max()},
     std::size_t{1} << (8 * sizeof(std::size_t) - 14));
 

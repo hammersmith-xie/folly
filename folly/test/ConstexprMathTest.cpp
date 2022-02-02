@@ -44,7 +44,7 @@ TEST_F(ConstexprMathTest, constexpr_max)
   constexpr auto x = uint16_t(3);
   constexpr auto y = uint16_t(7);
   constexpr auto z = uint16_t(4);
-  constexpr auto a = folly::constexpr_max<int>(x, y, z);
+  constexpr auto a = folly::constexpr_max(x, y, z);
   EXPECT_EQ(7, a);
   EXPECT_TRUE((std::is_same<const uint16_t, decltype(a)>::value));
 }

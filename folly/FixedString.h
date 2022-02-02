@@ -989,7 +989,7 @@ namespace folly
     constexpr void swap(BasicFixedString &that) noexcept
     {
       // less-than-or-equal here to copy the null terminator:
-      for (std::size_t i = 0u; i <= folly::constexpr_max<int>(size_, that.size_);
+      for (std::size_t i = 0u; i <= folly::constexpr_max(size_, that.size_);
            ++i)
       {
         detail::fixedstring::constexpr_swap(data_[i], that.data_[i]);

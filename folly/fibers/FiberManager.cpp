@@ -399,7 +399,7 @@ namespace folly
 
       // SIGSTKSZ (8 kB on our architectures) isn't always enough for
       // folly::symbolizer, so allocate 32 kB.
-      constexpr size_t kAltStackSize = folly::constexpr_max<int>(SIGSTKSZ, 32 * 1024);
+      constexpr size_t kAltStackSize = folly::constexpr_max(SIGSTKSZ, 32 * 1024);
 
       bool hasAlternateStack()
       {
