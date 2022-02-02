@@ -22,11 +22,15 @@
 #include <folly/lang/Bits.h>
 #include <folly/portability/GTest.h>
 
-namespace {
-class ConstexprMathTest : public testing::Test {};
+namespace
+{
+  class ConstexprMathTest : public testing::Test
+  {
+  };
 } // namespace
 
-TEST_F(ConstexprMathTest, constexpr_min) {
+TEST_F(ConstexprMathTest, constexpr_min)
+{
   constexpr auto x = uint16_t(3);
   constexpr auto y = uint16_t(7);
   constexpr auto z = uint16_t(4);
@@ -35,16 +39,18 @@ TEST_F(ConstexprMathTest, constexpr_min) {
   EXPECT_TRUE((std::is_same<const uint16_t, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_max) {
+TEST_F(ConstexprMathTest, constexpr_max)
+{
   constexpr auto x = uint16_t(3);
   constexpr auto y = uint16_t(7);
   constexpr auto z = uint16_t(4);
-  constexpr auto a = folly::constexpr_max(x, y, z);
+  constexpr auto a = folly::constexpr_max<int>(x, y, z);
   EXPECT_EQ(7, a);
   EXPECT_TRUE((std::is_same<const uint16_t, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_clamp) {
+TEST_F(ConstexprMathTest, constexpr_clamp)
+{
   constexpr auto lo = uint16_t(3);
   constexpr auto hi = uint16_t(7);
   constexpr auto x = folly::constexpr_clamp(uint16_t(2), lo, hi);
@@ -56,112 +62,128 @@ TEST_F(ConstexprMathTest, constexpr_clamp) {
   EXPECT_TRUE((std::is_same<const uint16_t, decltype(y)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_unsigned) {
+TEST_F(ConstexprMathTest, constexpr_abs_unsigned)
+{
   constexpr auto v = uint32_t(17);
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17, a);
   EXPECT_TRUE((std::is_same<const uint32_t, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_signed_positive) {
+TEST_F(ConstexprMathTest, constexpr_abs_signed_positive)
+{
   constexpr auto v = int32_t(17);
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17, a);
   EXPECT_TRUE((std::is_same<const uint32_t, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_signed_negative) {
+TEST_F(ConstexprMathTest, constexpr_abs_signed_negative)
+{
   constexpr auto v = int32_t(-17);
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17, a);
   EXPECT_TRUE((std::is_same<const uint32_t, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_float_positive) {
+TEST_F(ConstexprMathTest, constexpr_abs_float_positive)
+{
   constexpr auto v = 17.5f;
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17.5, a);
   EXPECT_TRUE((std::is_same<const float, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_float_negative) {
+TEST_F(ConstexprMathTest, constexpr_abs_float_negative)
+{
   constexpr auto v = -17.5f;
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17.5, a);
   EXPECT_TRUE((std::is_same<const float, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_double_positive) {
+TEST_F(ConstexprMathTest, constexpr_abs_double_positive)
+{
   constexpr auto v = 17.5;
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17.5, a);
   EXPECT_TRUE((std::is_same<const double, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_abs_double_negative) {
+TEST_F(ConstexprMathTest, constexpr_abs_double_negative)
+{
   constexpr auto v = -17.5;
   constexpr auto a = folly::constexpr_abs(v);
   EXPECT_EQ(17.5, a);
   EXPECT_TRUE((std::is_same<const double, decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_1) {
+TEST_F(ConstexprMathTest, constexpr_log2_1)
+{
   constexpr auto v = 1ull;
   constexpr auto a = folly::constexpr_log2(v);
   EXPECT_EQ(0ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_2) {
+TEST_F(ConstexprMathTest, constexpr_log2_2)
+{
   constexpr auto v = 2ull;
   constexpr auto a = folly::constexpr_log2(v);
   EXPECT_EQ(1ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_64) {
+TEST_F(ConstexprMathTest, constexpr_log2_64)
+{
   constexpr auto v = 64ull;
   constexpr auto a = folly::constexpr_log2(v);
   EXPECT_EQ(6ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_ceil_1) {
+TEST_F(ConstexprMathTest, constexpr_log2_ceil_1)
+{
   constexpr auto v = 1ull;
   constexpr auto a = folly::constexpr_log2_ceil(v);
   EXPECT_EQ(0ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_ceil_2) {
+TEST_F(ConstexprMathTest, constexpr_log2_ceil_2)
+{
   constexpr auto v = 2ull;
   constexpr auto a = folly::constexpr_log2_ceil(v);
   EXPECT_EQ(1ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_ceil_3) {
+TEST_F(ConstexprMathTest, constexpr_log2_ceil_3)
+{
   constexpr auto v = 3ull;
   constexpr auto a = folly::constexpr_log2_ceil(v);
   EXPECT_EQ(2ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_ceil_63) {
+TEST_F(ConstexprMathTest, constexpr_log2_ceil_63)
+{
   constexpr auto v = 63ull;
   constexpr auto a = folly::constexpr_log2_ceil(v);
   EXPECT_EQ(6ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_log2_ceil_64) {
+TEST_F(ConstexprMathTest, constexpr_log2_ceil_64)
+{
   constexpr auto v = 64ull;
   constexpr auto a = folly::constexpr_log2_ceil(v);
   EXPECT_EQ(6ull, a);
   EXPECT_TRUE((std::is_same<decltype(v), decltype(a)>::value));
 }
 
-TEST_F(ConstexprMathTest, constexpr_ceil) {
+TEST_F(ConstexprMathTest, constexpr_ceil)
+{
   {
     constexpr auto roundable = 20ull;
     constexpr auto round = 6ull;
@@ -182,7 +204,8 @@ TEST_F(ConstexprMathTest, constexpr_ceil) {
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_pow) {
+TEST_F(ConstexprMathTest, constexpr_pow)
+{
   {
     constexpr auto a = folly::constexpr_pow(uint64_t(0), 15);
     EXPECT_EQ(0, a);
@@ -197,7 +220,8 @@ TEST_F(ConstexprMathTest, constexpr_pow) {
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_last_set_examples) {
+TEST_F(ConstexprMathTest, constexpr_find_last_set_examples)
+{
   {
     constexpr auto a = folly::constexpr_find_last_set(int64_t(0));
     EXPECT_EQ(0, a);
@@ -212,26 +236,31 @@ TEST_F(ConstexprMathTest, constexpr_find_last_set_examples) {
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_last_set_all_64_adjacents) {
+TEST_F(ConstexprMathTest, constexpr_find_last_set_all_64_adjacents)
+{
   using type = uint64_t;
   constexpr auto const bits = std::numeric_limits<type>::digits;
   EXPECT_EQ(0, folly::constexpr_find_last_set(type(0)));
-  for (size_t i = 0; i < bits; ++i) {
+  for (size_t i = 0; i < bits; ++i)
+  {
     type const v = type(1) << i;
     EXPECT_EQ(i + 1, folly::constexpr_find_last_set(v));
     EXPECT_EQ(i, folly::constexpr_find_last_set((v - 1)));
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_last_set_all_8_reference) {
+TEST_F(ConstexprMathTest, constexpr_find_last_set_all_8_reference)
+{
   using type = char;
-  for (size_t i = 0; i < 256u; ++i) {
+  for (size_t i = 0; i < 256u; ++i)
+  {
     auto const expected = folly::findLastSet(type(i));
     EXPECT_EQ(expected, folly::constexpr_find_last_set(type(i)));
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_first_set_examples) {
+TEST_F(ConstexprMathTest, constexpr_find_first_set_examples)
+{
   {
     constexpr auto a = folly::constexpr_find_first_set(int64_t(0));
     EXPECT_EQ(0, a);
@@ -246,19 +275,23 @@ TEST_F(ConstexprMathTest, constexpr_find_first_set_examples) {
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_first_set_all_64_adjacent) {
+TEST_F(ConstexprMathTest, constexpr_find_first_set_all_64_adjacent)
+{
   using type = uint64_t;
   constexpr auto const bits = std::numeric_limits<type>::digits;
   EXPECT_EQ(0, folly::constexpr_find_first_set(type(0)));
-  for (size_t i = 0; i < bits; ++i) {
+  for (size_t i = 0; i < bits; ++i)
+  {
     type const v = (type(1) << (bits - 1)) | (type(1) << i);
     EXPECT_EQ(i + 1, folly::constexpr_find_first_set(v));
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_find_first_set_all_8_reference) {
+TEST_F(ConstexprMathTest, constexpr_find_first_set_all_8_reference)
+{
   using type = char;
-  for (size_t i = 0; i < 256u; ++i) {
+  for (size_t i = 0; i < 256u; ++i)
+  {
     auto const expected = folly::findFirstSet(type(i));
     EXPECT_EQ(expected, folly::constexpr_find_first_set(type(i)));
   }
@@ -271,9 +304,12 @@ constexpr auto kInt8Max = std::numeric_limits<int8_t>::max();
 constexpr auto kInt8Min = std::numeric_limits<int8_t>::min();
 constexpr auto kUInt8Max = std::numeric_limits<uint8_t>::max();
 
-TEST_F(ConstexprMathTest, constexpr_add_overflow_clamped) {
-  for (int a = kInt8Min; a <= kInt8Max; a++) {
-    for (int b = kInt8Min; b <= kInt8Max; b++) {
+TEST_F(ConstexprMathTest, constexpr_add_overflow_clamped)
+{
+  for (int a = kInt8Min; a <= kInt8Max; a++)
+  {
+    for (int b = kInt8Min; b <= kInt8Max; b++)
+    {
       int c = folly::constexpr_clamp(a + b, int(kInt8Min), int(kInt8Max));
       int8_t a1 = a;
       int8_t b1 = b;
@@ -284,8 +320,10 @@ TEST_F(ConstexprMathTest, constexpr_add_overflow_clamped) {
     }
   }
 
-  for (int a = 0; a <= kUInt8Max; a++) {
-    for (int b = 0; b <= kUInt8Max; b++) {
+  for (int a = 0; a <= kUInt8Max; a++)
+  {
+    for (int b = 0; b <= kUInt8Max; b++)
+    {
       int c = folly::constexpr_clamp(a + b, 0, int(kUInt8Max));
       uint8_t a1 = a;
       uint8_t b1 = b;
@@ -317,9 +355,12 @@ TEST_F(ConstexprMathTest, constexpr_add_overflow_clamped) {
   EXPECT_EQ(kUInt64Max, v5);
 }
 
-TEST_F(ConstexprMathTest, constexpr_sub_overflow_clamped) {
-  for (int a = kInt8Min; a <= kInt8Max; a++) {
-    for (int b = kInt8Min; b <= kInt8Max; b++) {
+TEST_F(ConstexprMathTest, constexpr_sub_overflow_clamped)
+{
+  for (int a = kInt8Min; a <= kInt8Max; a++)
+  {
+    for (int b = kInt8Min; b <= kInt8Max; b++)
+    {
       int c = folly::constexpr_clamp(a - b, int(kInt8Min), int(kInt8Max));
       int8_t a1 = a;
       int8_t b1 = b;
@@ -330,8 +371,10 @@ TEST_F(ConstexprMathTest, constexpr_sub_overflow_clamped) {
     }
   }
 
-  for (int a = 0; a <= kUInt8Max; a++) {
-    for (int b = 0; b <= kUInt8Max; b++) {
+  for (int a = 0; a <= kUInt8Max; a++)
+  {
+    for (int b = 0; b <= kUInt8Max; b++)
+    {
       int c = folly::constexpr_clamp(a - b, 0, int(kUInt8Max));
       uint8_t a1 = a;
       uint8_t b1 = b;
@@ -372,14 +415,16 @@ TEST_F(ConstexprMathTest, constexpr_sub_overflow_clamped) {
 }
 
 template <class F, class... Args>
-void for_each_argument(F&& f, Args&&... args) {
+void for_each_argument(F &&f, Args &&...args)
+{
   [](...) {}((f(std::forward<Args>(args)), 0)...);
 }
 
 // float -> integral clamp cast
 template <typename Src, typename Dst>
 static typename std::enable_if<std::is_floating_point<Src>::value, void>::type
-run_constexpr_clamp_cast_test(Src, Dst) {
+run_constexpr_clamp_cast_test(Src, Dst)
+{
   constexpr auto kQuietNaN = std::numeric_limits<Src>::quiet_NaN();
   constexpr auto kSignalingNaN = std::numeric_limits<Src>::signaling_NaN();
   constexpr auto kPositiveInf = std::numeric_limits<Src>::infinity();
@@ -414,7 +459,8 @@ run_constexpr_clamp_cast_test(Src, Dst) {
 // integral -> integral clamp cast
 template <typename Src, typename Dst>
 static typename std::enable_if<std::is_integral<Src>::value, void>::type
-run_constexpr_clamp_cast_test(Src, Dst) {
+run_constexpr_clamp_cast_test(Src, Dst)
+{
   constexpr auto kSrcMax = std::numeric_limits<Src>::max();
   constexpr auto kSrcMin = std::numeric_limits<Src>::min();
 
@@ -426,32 +472,39 @@ run_constexpr_clamp_cast_test(Src, Dst) {
   EXPECT_EQ(Dst(123), folly::constexpr_clamp_cast<Dst>(Src(123)));
 
   // int -> uint
-  if (std::is_signed<Src>::value && std::is_unsigned<Dst>::value) {
+  if (std::is_signed<Src>::value && std::is_unsigned<Dst>::value)
+  {
     EXPECT_EQ(Dst(0), folly::constexpr_clamp_cast<Dst>(Src(-123)));
   }
 
-  if (sizeof(Src) > sizeof(Dst)) {
+  if (sizeof(Src) > sizeof(Dst))
+  {
     // range clamping
     EXPECT_EQ(kDstMax, folly::constexpr_clamp_cast<Dst>(kSrcMax));
 
     // int -> int
-    if (std::is_signed<Src>::value && std::is_signed<Dst>::value) {
+    if (std::is_signed<Src>::value && std::is_signed<Dst>::value)
+    {
       EXPECT_EQ(kDstMin, folly::constexpr_clamp_cast<Dst>(kSrcMin));
     }
-
-  } else if (
+  }
+  else if (
       std::is_unsigned<Src>::value && std::is_signed<Dst>::value &&
-      sizeof(Src) == sizeof(Dst)) {
+      sizeof(Src) == sizeof(Dst))
+  {
     // uint -> int, same size
     EXPECT_EQ(kDstMax, folly::constexpr_clamp_cast<Dst>(kSrcMax));
   }
 }
 
-TEST_F(ConstexprMathTest, constexpr_clamp_cast) {
+TEST_F(ConstexprMathTest, constexpr_clamp_cast)
+{
   for_each_argument(
-      [](auto dst) {
+      [](auto dst)
+      {
         for_each_argument(
-            [&](auto src) { run_constexpr_clamp_cast_test(src, dst); },
+            [&](auto src)
+            { run_constexpr_clamp_cast_test(src, dst); },
             // source types
             float(),
             double(),

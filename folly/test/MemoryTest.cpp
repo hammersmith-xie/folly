@@ -33,29 +33,33 @@
 
 using namespace folly;
 
-static constexpr std::size_t kTooBig = folly::constexpr_max(
+static constexpr std::size_t kTooBig = folly::constexpr_max<std::size_t>(
     std::size_t{std::numeric_limits<uint32_t>::max()},
     std::size_t{1} << (8 * sizeof(std::size_t) - 14));
 
-TEST(allocateBytes, simple) {
+TEST(allocateBytes, simple)
+{
   auto p = allocateBytes(10);
   EXPECT_TRUE(p != nullptr);
   deallocateBytes(p, 10);
 }
 
-TEST(allocateBytes, zero) {
+TEST(allocateBytes, zero)
+{
   auto p = allocateBytes(0);
   deallocateBytes(p, 0);
 }
 
-TEST(operatorNewDelete, zero) {
+TEST(operatorNewDelete, zero)
+{
   auto p = ::operator new(0);
   EXPECT_TRUE(p != nullptr);
   ::operator delete(p);
 }
 
 #if __cpp_sized_deallocation
-TEST(operatorNewDelete, sized_zero) {
+TEST(operatorNewDelete, sized_zero)
+{
   std::size_t n = 0;
   auto p = ::operator new(n);
   EXPECT_TRUE(p != nullptr);
@@ -63,13 +67,16 @@ TEST(operatorNewDelete, sized_zero) {
 }
 #endif
 
-TEST(aligned_malloc, examples) {
-  auto trial = [](size_t align) {
+TEST(aligned_malloc, examples)
+{
+  auto trial = [](size_t align)
+  {
     auto const ptr = aligned_malloc(1, align);
     return (aligned_free(ptr), uintptr_t(ptr));
   };
 
-  if (!kIsSanitize) { // asan allocator raises SIGABRT instead
+  if (!kIsSanitize)
+  { // asan allocator raises SIGABRT instead
     EXPECT_EQ(EINVAL, (trial(2), errno)) << "too small";
     EXPECT_EQ(EINVAL, (trial(513), errno)) << "not power of two";
   }
@@ -78,7 +85,8 @@ TEST(aligned_malloc, examples) {
   EXPECT_EQ(0, trial(8192) % 8192);
 }
 
-TEST(make_unique, compatible_with_std_make_unique) {
+TEST(make_unique, compatible_with_std_make_unique)
+{
   //  HACK: To enforce that `folly::` is imported here.
   to_shared_ptr(std::unique_ptr<std::string>());
 
@@ -86,7 +94,8 @@ TEST(make_unique, compatible_with_std_make_unique) {
   make_unique<string>("hello, world");
 }
 
-TEST(to_weak_ptr, example) {
+TEST(to_weak_ptr, example)
+{
   auto s = std::make_shared<int>(17);
   EXPECT_EQ(1, s.use_count());
   EXPECT_EQ(2, (to_weak_ptr(s).lock(), s.use_count())) << "lvalue";
@@ -96,21 +105,24 @@ TEST(to_weak_ptr, example) {
 // These are here to make it easy to double-check the assembly
 // for to_weak_ptr_aliasing
 extern "C" FOLLY_KEEP void check_to_weak_ptr_aliasing(
-    std::shared_ptr<void> const& s,
-    void* a) {
+    std::shared_ptr<void> const &s,
+    void *a)
+{
   auto w = folly::to_weak_ptr_aliasing(s, a);
   asm_volatile_memory();
   asm_volatile_pause();
 }
 extern "C" FOLLY_KEEP void check_to_weak_ptr_aliasing_fallback(
-    std::shared_ptr<void> const& s,
-    void* a) {
+    std::shared_ptr<void> const &s,
+    void *a)
+{
   auto w = folly::to_weak_ptr(std::shared_ptr<void>(s, a));
   asm_volatile_memory();
   asm_volatile_pause();
 }
 
-TEST(to_weak_ptr_aliasing, active) {
+TEST(to_weak_ptr_aliasing, active)
+{
   using S = std::pair<int, int>;
 
   auto s = std::make_shared<S>();
@@ -145,7 +157,8 @@ TEST(to_weak_ptr_aliasing, active) {
   EXPECT_TRUE(w3.expired());
 }
 
-TEST(to_weak_ptr_aliasing, inactive) {
+TEST(to_weak_ptr_aliasing, inactive)
+{
   using S = std::pair<int, int>;
 
   std::shared_ptr<S> s;
@@ -160,31 +173,36 @@ TEST(to_weak_ptr_aliasing, inactive) {
   EXPECT_EQ(locked.use_count(), 0);
 }
 
-TEST(copy_to_unique_ptr, example) {
+TEST(copy_to_unique_ptr, example)
+{
   std::unique_ptr<int> s = copy_to_unique_ptr(17);
   EXPECT_EQ(17, *s);
 }
 
-TEST(copy_to_shared_ptr, example) {
+TEST(copy_to_shared_ptr, example)
+{
   std::shared_ptr<int> s = copy_to_shared_ptr(17);
   EXPECT_EQ(17, *s);
 }
 
-TEST(SysAllocator, equality) {
+TEST(SysAllocator, equality)
+{
   using Alloc = SysAllocator<float>;
   Alloc const a, b;
   EXPECT_TRUE(a == b);
   EXPECT_FALSE(a != b);
 }
 
-TEST(SysAllocator, allocate_unique) {
+TEST(SysAllocator, allocate_unique)
+{
   using Alloc = SysAllocator<float>;
   Alloc const alloc;
   auto ptr = allocate_unique<float>(alloc, 3.);
   EXPECT_EQ(3., *ptr);
 }
 
-TEST(SysAllocator, vector) {
+TEST(SysAllocator, vector)
+{
   using Alloc = SysAllocator<float>;
   Alloc const alloc;
   std::vector<float, Alloc> nums(alloc);
@@ -193,23 +211,27 @@ TEST(SysAllocator, vector) {
   EXPECT_THAT(nums, testing::ElementsAreArray({3., 5.}));
 }
 
-TEST(SysAllocator, bad_alloc) {
+TEST(SysAllocator, bad_alloc)
+{
   using Alloc = SysAllocator<float>;
   Alloc const alloc;
   std::vector<float, Alloc> nums(alloc);
-  if (!kIsSanitize) {
+  if (!kIsSanitize)
+  {
     EXPECT_THROW(nums.reserve(kTooBig), std::bad_alloc);
   }
 }
 
-TEST(AlignedSysAllocator, equality_fixed) {
+TEST(AlignedSysAllocator, equality_fixed)
+{
   using Alloc = AlignedSysAllocator<float, FixedAlign<1024>>;
   Alloc const a, b;
   EXPECT_TRUE(a == b);
   EXPECT_FALSE(a != b);
 }
 
-TEST(AlignedSysAllocator, allocate_unique_fixed) {
+TEST(AlignedSysAllocator, allocate_unique_fixed)
+{
   using Alloc = AlignedSysAllocator<float, FixedAlign<1024>>;
   Alloc const alloc;
   auto ptr = allocate_unique<float>(alloc, 3.);
@@ -217,19 +239,22 @@ TEST(AlignedSysAllocator, allocate_unique_fixed) {
   EXPECT_EQ(0, std::uintptr_t(ptr.get()) % 1024);
 }
 
-TEST(AlignedSysAllocator, undersized_fixed) {
+TEST(AlignedSysAllocator, undersized_fixed)
+{
   constexpr auto align = has_extended_alignment ? 1024 : max_align_v;
-  struct alignas(align) Big {
+  struct alignas(align) Big
+  {
     float value;
   };
-  using Alloc = AlignedSysAllocator<Big, FixedAlign<sizeof(void*)>>;
+  using Alloc = AlignedSysAllocator<Big, FixedAlign<sizeof(void *)>>;
   Alloc const alloc;
   auto ptr = allocate_unique<Big>(alloc, Big{3.});
   EXPECT_EQ(3., ptr->value);
   EXPECT_EQ(0, std::uintptr_t(ptr.get()) % align);
 }
 
-TEST(AlignedSysAllocator, vector_fixed) {
+TEST(AlignedSysAllocator, vector_fixed)
+{
   using Alloc = AlignedSysAllocator<float, FixedAlign<1024>>;
   Alloc const alloc;
   std::vector<float, Alloc> nums(alloc);
@@ -239,16 +264,19 @@ TEST(AlignedSysAllocator, vector_fixed) {
   EXPECT_EQ(0, std::uintptr_t(nums.data()) % 1024);
 }
 
-TEST(AlignedSysAllocator, bad_alloc_fixed) {
+TEST(AlignedSysAllocator, bad_alloc_fixed)
+{
   using Alloc = AlignedSysAllocator<float, FixedAlign<1024>>;
   Alloc const alloc;
   std::vector<float, Alloc> nums(alloc);
-  if (!kIsSanitize) {
+  if (!kIsSanitize)
+  {
     EXPECT_THROW(nums.reserve(kTooBig), std::bad_alloc);
   }
 }
 
-TEST(AlignedSysAllocator, equality_default) {
+TEST(AlignedSysAllocator, equality_default)
+{
   using Alloc = AlignedSysAllocator<float>;
   Alloc const a(1024), b(1024), c(512);
   EXPECT_TRUE(a == b);
@@ -257,7 +285,8 @@ TEST(AlignedSysAllocator, equality_default) {
   EXPECT_TRUE(a != c);
 }
 
-TEST(AlignedSysAllocator, allocate_unique_default) {
+TEST(AlignedSysAllocator, allocate_unique_default)
+{
   using Alloc = AlignedSysAllocator<float>;
   Alloc const alloc(1024);
   auto ptr = allocate_unique<float>(alloc, 3.);
@@ -265,19 +294,22 @@ TEST(AlignedSysAllocator, allocate_unique_default) {
   EXPECT_EQ(0, std::uintptr_t(ptr.get()) % 1024);
 }
 
-TEST(AlignedSysAllocator, undersized_default) {
+TEST(AlignedSysAllocator, undersized_default)
+{
   constexpr auto align = has_extended_alignment ? 1024 : max_align_v;
-  struct alignas(align) Big {
+  struct alignas(align) Big
+  {
     float value;
   };
   using Alloc = AlignedSysAllocator<Big, DefaultAlign>;
-  Alloc const alloc(sizeof(void*));
+  Alloc const alloc(sizeof(void *));
   auto ptr = allocate_unique<Big>(alloc, Big{3.});
   EXPECT_EQ(3., ptr->value);
   EXPECT_EQ(0, std::uintptr_t(ptr.get()) % align);
 }
 
-TEST(AlignedSysAllocator, vector_default) {
+TEST(AlignedSysAllocator, vector_default)
+{
   using Alloc = AlignedSysAllocator<float>;
   Alloc const alloc(1024);
   std::vector<float, Alloc> nums(alloc);
@@ -287,49 +319,60 @@ TEST(AlignedSysAllocator, vector_default) {
   EXPECT_EQ(0, std::uintptr_t(nums.data()) % 1024);
 }
 
-TEST(AlignedSysAllocator, bad_alloc_default) {
+TEST(AlignedSysAllocator, bad_alloc_default)
+{
   using Alloc = AlignedSysAllocator<float>;
   Alloc const alloc(1024);
   std::vector<float, Alloc> nums(alloc);
-  if (!kIsSanitize) {
+  if (!kIsSanitize)
+  {
     EXPECT_THROW(nums.reserve(kTooBig), std::bad_alloc);
   }
 }
 
-TEST(AlignedSysAllocator, converting_constructor) {
+TEST(AlignedSysAllocator, converting_constructor)
+{
   using Alloc1 = AlignedSysAllocator<float>;
   using Alloc2 = AlignedSysAllocator<double>;
   Alloc1 const alloc1(1024);
   Alloc2 const alloc2(alloc1);
 }
 
-TEST(allocate_sys_buffer, compiles) {
+TEST(allocate_sys_buffer, compiles)
+{
   auto buf = allocate_sys_buffer(256);
   //  Freed at the end of the scope.
 }
 
-struct CountedAllocatorStats {
+struct CountedAllocatorStats
+{
   size_t deallocates = 0;
 };
 
 template <typename T>
-class CountedAllocator : public std::allocator<T> {
- private:
-  CountedAllocatorStats* stats_;
+class CountedAllocator : public std::allocator<T>
+{
+private:
+  CountedAllocatorStats *stats_;
 
- public:
-  explicit CountedAllocator(CountedAllocatorStats& stats) noexcept
+public:
+  explicit CountedAllocator(CountedAllocatorStats &stats) noexcept
       : stats_(&stats) {}
-  void deallocate(T* p, size_t n) {
+  void deallocate(T *p, size_t n)
+  {
     std::allocator<T>::deallocate(p, n);
     ++stats_->deallocates;
   }
 };
 
-TEST(allocate_unique, ctor_failure) {
-  struct CtorThrows {
-    explicit CtorThrows(bool cond) {
-      if (cond) {
+TEST(allocate_unique, ctor_failure)
+{
+  struct CtorThrows
+  {
+    explicit CtorThrows(bool cond)
+    {
+      if (cond)
+      {
         throw std::runtime_error("nope");
       }
     }
@@ -360,41 +403,50 @@ TEST(allocate_unique, ctor_failure) {
   }
 }
 
-namespace {
-template <typename T>
-struct TestAlloc1 : SysAllocator<T> {
-  template <typename U, typename... Args>
-  void construct(U* p, Args&&... args) {
-    ::new (static_cast<void*>(p)) U(std::forward<Args>(args)...);
-  }
-};
+namespace
+{
+  template <typename T>
+  struct TestAlloc1 : SysAllocator<T>
+  {
+    template <typename U, typename... Args>
+    void construct(U *p, Args &&...args)
+    {
+      ::new (static_cast<void *>(p)) U(std::forward<Args>(args)...);
+    }
+  };
 
-template <typename T>
-struct TestAlloc2 : TestAlloc1<T> {
-  template <typename U>
-  void destroy(U* p) {
-    p->~U();
-  }
-};
+  template <typename T>
+  struct TestAlloc2 : TestAlloc1<T>
+  {
+    template <typename U>
+    void destroy(U *p)
+    {
+      p->~U();
+    }
+  };
 
-template <typename T>
-struct TestAlloc3 : TestAlloc2<T> {
-  using folly_has_default_object_construct = std::true_type;
-};
+  template <typename T>
+  struct TestAlloc3 : TestAlloc2<T>
+  {
+    using folly_has_default_object_construct = std::true_type;
+  };
 
-template <typename T>
-struct TestAlloc4 : TestAlloc3<T> {
-  using folly_has_default_object_destroy = std::true_type;
-};
+  template <typename T>
+  struct TestAlloc4 : TestAlloc3<T>
+  {
+    using folly_has_default_object_destroy = std::true_type;
+  };
 
-template <typename T>
-struct TestAlloc5 : SysAllocator<T> {
-  using folly_has_default_object_construct = std::true_type;
-  using folly_has_default_object_destroy = std::false_type;
-};
+  template <typename T>
+  struct TestAlloc5 : SysAllocator<T>
+  {
+    using folly_has_default_object_construct = std::true_type;
+    using folly_has_default_object_destroy = std::false_type;
+  };
 } // namespace
 
-TEST(AllocatorObjectLifecycleTraits, compiles) {
+TEST(AllocatorObjectLifecycleTraits, compiles)
+{
   using A = std::allocator<int>;
   using S = std::string;
 
@@ -461,25 +513,28 @@ TEST(AllocatorObjectLifecycleTraits, compiles) {
 }
 
 template <typename T>
-struct ExpectingAlloc {
+struct ExpectingAlloc
+{
   using value_type = T;
 
   ExpectingAlloc(std::size_t expectedSize, std::size_t expectedCount)
       : expectedSize_{expectedSize}, expectedCount_{expectedCount} {}
 
   template <class U>
-  explicit ExpectingAlloc(ExpectingAlloc<U> const& other) noexcept
+  explicit ExpectingAlloc(ExpectingAlloc<U> const &other) noexcept
       : expectedSize_{other.expectedSize_},
         expectedCount_{other.expectedCount_} {}
 
-  T* allocate(std::size_t n) {
+  T *allocate(std::size_t n)
+  {
     EXPECT_EQ(expectedSize_, sizeof(T));
     EXPECT_EQ(expectedSize_, alignof(T));
     EXPECT_EQ(expectedCount_, n);
     return std::allocator<T>{}.allocate(n);
   }
 
-  void deallocate(T* p, std::size_t n) {
+  void deallocate(T *p, std::size_t n)
+  {
     std::allocator<T>{}.deallocate(p, n);
   }
 
@@ -487,11 +542,13 @@ struct ExpectingAlloc {
   std::size_t expectedCount_;
 };
 
-struct alignas(64) OverAlignedType {
+struct alignas(64) OverAlignedType
+{
   std::array<char, 64> raw_;
 };
 
-TEST(allocateOverAligned, notActuallyOver) {
+TEST(allocateOverAligned, notActuallyOver)
+{
   // allocates 6 bytes with alignment 4, should get turned into an
   // allocation of 2 elements of something of size and alignment 4
   ExpectingAlloc<char> a(4, 2);
@@ -501,7 +558,8 @@ TEST(allocateOverAligned, notActuallyOver) {
   EXPECT_EQ((folly::allocationBytesForOverAligned<decltype(a), 4>(6)), 8);
 }
 
-TEST(allocateOverAligned, manualOverStdAlloc) {
+TEST(allocateOverAligned, manualOverStdAlloc)
+{
   // allocates 6 bytes with alignment 64 using std::allocator, which will
   // result in a call to aligned_malloc underneath.  We free one directly
   // to check that this is not the padding path
@@ -514,7 +572,8 @@ TEST(allocateOverAligned, manualOverStdAlloc) {
   EXPECT_EQ((folly::allocationBytesForOverAligned<decltype(a), 64>(3)), 6);
 }
 
-TEST(allocateOverAligned, manualOverCustomAlloc) {
+TEST(allocateOverAligned, manualOverCustomAlloc)
+{
   // allocates 6 byte with alignment 64 using non-standard allocator, which
   // will result in an allocation of 64 + alignof(max_align_t) underneath.
   ExpectingAlloc<short> a(
@@ -527,7 +586,8 @@ TEST(allocateOverAligned, manualOverCustomAlloc) {
       64 + alignof(folly::max_align_t));
 }
 
-TEST(allocateOverAligned, defaultOverCustomAlloc) {
+TEST(allocateOverAligned, defaultOverCustomAlloc)
+{
   ExpectingAlloc<OverAlignedType> a(
       alignof(folly::max_align_t), 128 / alignof(folly::max_align_t));
   auto p = folly::allocateOverAligned(a, 1);
