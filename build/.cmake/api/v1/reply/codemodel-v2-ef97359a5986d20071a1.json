@@ -1,0 +1,154 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "folly",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "folly",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "folly/experimental/exception_tracer",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "folly/experimental/exception_tracer"
+				},
+				{
+					"build" : "folly/logging/example",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.2"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "folly/logging/example",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "folly",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "folly::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-folly-Debug-b4113bf665d54a9db232.json",
+					"name" : "folly",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "folly_base::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-folly_base-Debug-89a752675dadf2a5182a.json",
+					"name" : "folly_base",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "folly_test_util::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-folly_test_util-Debug-ce78d8768859d82b3a4e.json",
+					"name" : "folly_test_util",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "follybenchmark::@d93474e94fd6150ea302",
+					"jsonFile" : "target-follybenchmark-Debug-e8c332c3b77285ccf331.json",
+					"name" : "follybenchmark",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "logging_example::@df1ebd2e686fa7b76013",
+					"jsonFile" : "target-logging_example-Debug-b003cf9cc14c4afcd6ea.json",
+					"name" : "logging_example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "logging_example_lib::@df1ebd2e686fa7b76013",
+					"jsonFile" : "target-logging_example_lib-Debug-aa609030676df79d6b3f.json",
+					"name" : "logging_example_lib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/axexie/code/folly/build",
+		"source" : "/home/axexie/code/folly"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

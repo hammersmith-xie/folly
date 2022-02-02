@@ -1,0 +1,984 @@
+The system is: Linux - 5.10.60.1-microsoft-standard-WSL2 - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /bin/g++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/axexie/code/folly/build/CMakeFiles/3.20.6/CompilerIdCXX/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /bin/gcc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/axexie/code/folly/build/CMakeFiles/3.20.6/CompilerIdC/a.out"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+gcc (GCC) 10.3.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_9bba7 && [1/2] Building CXX object CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o
+Using built-in specs.
+COLLECT_GCC=/bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/axexie/cmake-3.20.6-linux-x86_64/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccPATmI0.s
+GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include
+ /usr/local/include
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 95408dfc75e688668180cebb041f5ce4
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccPATmI0.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+[2/2] Linking CXX executable cmTC_9bba7
+Using built-in specs.
+COLLECT_GCC=/bin/g++
+COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.3.0 (GCC) 
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9bba7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTf5k9m.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9bba7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9bba7' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+    add: [/usr/local/include]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0] ==> [/usr/local/include/c++/10.3.0]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu] ==> [/usr/local/include/c++/10.3.0/x86_64-pc-linux-gnu]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward] ==> [/usr/local/include/c++/10.3.0/backward]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/include/c++/10.3.0;/usr/local/include/c++/10.3.0/x86_64-pc-linux-gnu;/usr/local/include/c++/10.3.0/backward;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include;/usr/local/include;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_9bba7 && [1/2] Building CXX object CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --enable-checking=release --enable-languages=c c++ --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/axexie/cmake-3.20.6-linux-x86_64/share/cmake-3.20/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccPATmI0.s]
+  ignore line: [GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/x86_64-pc-linux-gnu]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../include/c++/10.3.0/backward]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 95408dfc75e688668180cebb041f5ce4]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccPATmI0.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [[2/2] Linking CXX executable cmTC_9bba7]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --enable-checking=release --enable-languages=c c++ --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9bba7' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTf5k9m.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9bba7 /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccTf5k9m.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_9bba7] ==> ignore
+    arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+    arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+    arg [CMakeFiles/cmTC_9bba7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+    arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/usr/local/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/usr/local/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/usr/local/lib]
+  implicit fwks: []
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_d357d && [1/2] Building C object CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o
+Using built-in specs.
+COLLECT_GCC=/bin/gcc
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.3.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/axexie/cmake-3.20.6-linux-x86_64/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccwnyudW.s
+GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include
+ /usr/local/include
+ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.3.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 411c18985db4e4a40210a8f7b9a7580c
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o /tmp/ccwnyudW.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+[2/2] Linking C executable cmTC_d357d
+Using built-in specs.
+COLLECT_GCC=/bin/gcc
+COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.3.0 (GCC) 
+COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d357d' '-mtune=generic' '-march=x86-64'
+ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNfBFbe.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d357d /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d357d' '-mtune=generic' '-march=x86-64'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+    add: [/usr/local/include]
+    add: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include;/usr/local/include;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_d357d && [1/2] Building C object CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/bin/gcc]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --enable-checking=release --enable-languages=c c++ --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.3.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/axexie/cmake-3.20.6-linux-x86_64/share/cmake-3.20/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccwnyudW.s]
+  ignore line: [GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../x86_64-pc-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/include-fixed]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 10.3.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 411c18985db4e4a40210a8f7b9a7580c]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o /tmp/ccwnyudW.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [[2/2] Linking C executable cmTC_d357d]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/bin/gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: ../configure --enable-checking=release --enable-languages=c c++ --disable-multilib]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib]
+  ignore line: [gcc version 10.3.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/libexec/gcc/x86_64-pc-linux-gnu/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d357d' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2 -plugin /usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNfBFbe.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d357d /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../.. CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o]
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/libexec/gcc/x86_64-pc-linux-gnu/10.3.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccNfBFbe.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d357d] ==> ignore
+    arg [/lib/x86_64-linux-gnu/crt1.o] ==> obj [/lib/x86_64-linux-gnu/crt1.o]
+    arg [/lib/x86_64-linux-gnu/crti.o] ==> obj [/lib/x86_64-linux-gnu/crti.o]
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..]
+    arg [CMakeFiles/cmTC_d357d.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o] ==> obj [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o]
+    arg [/lib/x86_64-linux-gnu/crtn.o] ==> obj [/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0] ==> [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../../../lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/../../..] ==> [/usr/local/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/lib/x86_64-linux-gnu/crt1.o;/lib/x86_64-linux-gnu/crti.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtbegin.o;/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0/crtend.o;/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/local/lib/gcc/x86_64-pc-linux-gnu/10.3.0;/usr/local/lib64;/lib/x86_64-linux-gnu;/lib64;/usr/lib/x86_64-linux-gnu;/usr/lib64;/usr/local/lib]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_813cd && [1/2] Building C object CMakeFiles/cmTC_813cd.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_813cd
+
+
+
+Determining if the function ASN1_TIME_diff exists passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_be0b6 && [1/2] Building C object CMakeFiles/cmTC_be0b6.dir/CheckFunctionExists.c.o
+cc1: warning: command-line option ‘-std=gnu++17’ is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_be0b6
+
+
+
+Determining if the BZ2_bzCompressInit exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_29533 && [1/2] Building C object CMakeFiles/cmTC_29533.dir/CheckSymbolExists.c.o
+cc1: warning: command-line option ‘-std=gnu++17’ is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_29533
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <bzlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef BZ2_bzCompressInit
+  return ((int*)(&BZ2_bzCompressInit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function lzma_auto_decoder exists in the /usr/lib/x86_64-linux-gnu/liblzma.so passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_34555 && [1/2] Building C object CMakeFiles/cmTC_34555.dir/CheckFunctionExists.c.o
+cc1: warning: command-line option ‘-std=gnu++17’ is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_34555
+
+
+
+Determining if the function lzma_easy_encoder exists in the /usr/lib/x86_64-linux-gnu/liblzma.so passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_3025b && [1/2] Building C object CMakeFiles/cmTC_3025b.dir/CheckFunctionExists.c.o
+cc1: warning: command-line option ‘-std=gnu++17’ is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_3025b
+
+
+
+Determining if the function lzma_lzma_preset exists in the /usr/lib/x86_64-linux-gnu/liblzma.so passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a7551 && [1/2] Building C object CMakeFiles/cmTC_a7551.dir/CheckFunctionExists.c.o
+cc1: warning: command-line option ‘-std=gnu++17’ is valid for C++/ObjC++ but not for C
+[2/2] Linking C executable cmTC_a7551
+
+
+
+Determining if the swapcontext exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_8280e && [1/2] Building CXX object CMakeFiles/cmTC_8280e.dir/CheckSymbolExists.cxx.o
+[2/2] Linking CXX executable cmTC_8280e
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <ucontext.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef swapcontext
+  return ((int*)(&swapcontext))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file elf.h exists passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_bcc40 && [1/2] Building CXX object CMakeFiles/cmTC_bcc40.dir/CheckIncludeFile.cxx.o
+[2/2] Linking CXX executable cmTC_bcc40
+
+
+
+Determining if the backtrace exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_f79e6 && [1/2] Building C object CMakeFiles/cmTC_f79e6.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_f79e6
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <execinfo.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef backtrace
+  return ((int*)(&backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test FOLLY_CPP_ATOMIC_BUILTIN succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_4323f && [1/2] Building CXX object CMakeFiles/cmTC_4323f.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_4323f
+
+
+Source file was:
+
+  #include <atomic>
+  int main(int argc, char** argv) {
+    struct Test { int val; };
+    std::atomic<Test> s;
+    return static_cast<int>(s.is_lock_free());
+  }
+Performing C++ SOURCE FILE Test FOLLY_STDLIB_LIBSTDCXX succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_24ecf && [1/2] Building CXX object CMakeFiles/cmTC_24ecf.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_24ecf
+
+
+Source file was:
+
+  #include <type_traits>
+  #if _GLIBCXX_RELEASE
+  int main() {}
+  #endif
+Performing C++ SOURCE FILE Test FOLLY_STDLIB_LIBSTDCXX_GE_9 succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_bafbc && [1/2] Building CXX object CMakeFiles/cmTC_bafbc.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_bafbc
+
+
+Source file was:
+
+  #include <type_traits>
+  #if _GLIBCXX_RELEASE >= 9
+  int main() {}
+  #endif
+Performing C++ SOURCE FILE Test COMPILER_HAS_W_SHADOW_LOCAL succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_9d601 && [1/2] Building CXX object CMakeFiles/cmTC_9d601.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_9d601
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_W_SHADOW_COMPATIBLE_LOCAL succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_78af4 && [1/2] Building CXX object CMakeFiles/cmTC_78af4.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_78af4
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_W_NOEXCEPT_TYPE succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_2d328 && [1/2] Building CXX object CMakeFiles/cmTC_2d328.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_2d328
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_F_ALIGNED_NEW succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_d18a8 && [1/2] Building CXX object CMakeFiles/cmTC_d18a8.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_d18a8
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_F_OPENMP succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_813a2 && [1/2] Building CXX object CMakeFiles/cmTC_813a2.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_813a2
+
+
+Source file was:
+int main() { return 0; }
+Determining if the pthread_atfork exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a61f9 && [1/2] Building C object CMakeFiles/cmTC_a61f9.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a61f9
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_atfork
+  return ((int*)(&pthread_atfork))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the accept4 exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_24997 && [1/2] Building C object CMakeFiles/cmTC_24997.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_24997
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef accept4
+  return ((int*)(&accept4))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getrandom exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_92651 && [1/2] Building C object CMakeFiles/cmTC_92651.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_92651
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/random.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrandom
+  return ((int*)(&getrandom))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the preadv exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_44784 && [1/2] Building C object CMakeFiles/cmTC_44784.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_44784
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/uio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef preadv
+  return ((int*)(&preadv))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pwritev exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a4c1e && [1/2] Building C object CMakeFiles/cmTC_a4c1e.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_a4c1e
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/uio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pwritev
+  return ((int*)(&pwritev))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the clock_gettime exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_e8376 && [1/2] Building C object CMakeFiles/cmTC_e8376.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_e8376
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef clock_gettime
+  return ((int*)(&clock_gettime))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pipe2 exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_5b5f1 && [1/2] Building C object CMakeFiles/cmTC_5b5f1.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_5b5f1
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pipe2
+  return ((int*)(&pipe2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sendmmsg exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6045b && [1/2] Building C object CMakeFiles/cmTC_6045b.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_6045b
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sendmmsg
+  return ((int*)(&sendmmsg))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the recvmmsg exist passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6a7de && [1/2] Building C object CMakeFiles/cmTC_6a7de.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_6a7de
+
+
+File /home/axexie/code/folly/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef recvmmsg
+  return ((int*)(&recvmmsg))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function malloc_usable_size exists passed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_d3212 && [1/2] Building C object CMakeFiles/cmTC_d3212.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_d3212
+
+
+
+Performing C++ SOURCE FILE Test FOLLY_HAVE_IFUNC succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_1bf9d && [1/2] Building CXX object CMakeFiles/cmTC_1bf9d.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_1bf9d
+
+
+Source file was:
+
+  #pragma GCC diagnostic error "-Wattributes"
+  extern "C" void (*test_ifunc(void))() { return 0; }
+  void func() __attribute__((ifunc("test_ifunc")));
+  int main() { return 0; }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_STD__IS_TRIVIALLY_COPYABLE succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_82f00 && [1/2] Building CXX object CMakeFiles/cmTC_82f00.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_82f00
+
+
+Source file was:
+
+  #include <type_traits>
+  const bool val = std::is_trivially_copyable<bool>::value;
+  int main() { return 0; }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_UNALIGNED_ACCESS succeeded with the following compile output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_75acd && [1/2] Building CXX object CMakeFiles/cmTC_75acd.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_75acd
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+  int main(int, char**) {
+    char buf[64] = {0};
+    unsigned long *ptr = (unsigned long *)(buf + 1);
+    *ptr = 0xdeadbeef;
+    return (*ptr & 0xff) == 0xef ? 0 : 1;
+  }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_VLA succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_7f5ec && [1/2] Building CXX object CMakeFiles/cmTC_7f5ec.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_7f5ec
+
+
+Source file was:
+
+  int main(int argc, char** argv) {
+    unsigned size = argc;
+    char data[size];
+    return 0;
+  }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_WEAK_SYMBOLS succeeded with the following compile output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6d5be && [1/2] Building CXX object CMakeFiles/cmTC_6d5be.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_6d5be
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+  extern "C" int folly_example_undefined_weak_symbol() __attribute__((weak));
+  int main(int argc, char** argv) {
+    auto f = folly_example_undefined_weak_symbol; // null pointer
+    return f ? f() : 0; // must compile, link, and run with null pointer
+  }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_LINUX_VDSO succeeded with the following compile output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_58e3d && [1/2] Building CXX object CMakeFiles/cmTC_58e3d.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_58e3d
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+  #include <dlfcn.h>
+  int main() {
+    void *h = dlopen("linux-vdso.so.1", RTLD_LAZY | RTLD_LOCAL | RTLD_NOLOAD);
+    if (h == nullptr) {
+      return -1;
+    }
+    dlclose(h);
+    return 0;
+  }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_WCHAR_SUPPORT succeeded with the following compile output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_a3456 && [1/2] Building CXX object CMakeFiles/cmTC_a3456.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_a3456
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+  #include <cstddef>
+  #include <cwchar>
+  int main(int argc, char** argv) {
+    return wcstol(L"01", nullptr, 10) == 1 ? 0 : 1;
+  }
+Performing C++ SOURCE FILE Test FOLLY_HAVE_EXTRANDOM_SFMT19937 succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_6d5db && [1/2] Building CXX object CMakeFiles/cmTC_6d5db.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_6d5db
+
+
+Source file was:
+
+  #include <ext/random>
+  int main(int argc, char** argv) {
+    __gnu_cxx::sfmt19937 rng;
+    return 0;
+  }
+Performing C++ SOURCE FILE Test HAVE_VSNPRINTF_ERRORS succeeded with the following compile output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_16560 && [1/2] Building CXX object CMakeFiles/cmTC_16560.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_16560
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+  #include <stdarg.h>
+  #include <stdio.h>
+
+  int call_vsnprintf(const char* fmt, ...) {
+    char buf[256];
+    va_list ap;
+    va_start(ap, fmt);
+    int result = vsnprintf(buf, sizeof(buf), fmt, ap);
+    va_end(ap);
+    return result;
+  }
+
+  int main(int argc, char** argv) {
+    return call_vsnprintf("%", 1) < 0 ? 0 : 1;
+  }
+Performing C++ SOURCE FILE Test GFLAGS_NAMESPACE_IS_GFLAGS succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_af86e && [1/2] Building CXX object CMakeFiles/cmTC_af86e.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_af86e
+
+
+Source file was:
+
+    #include <gflags/gflags.h>
+    int main() {
+      gflags::GetArgv();
+      return 0;
+    }
+    
+Performing C++ SOURCE FILE Test COMPILER_HAS_F_COROUTINES succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_0e7dc && [1/2] Building CXX object CMakeFiles/cmTC_0e7dc.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_0e7dc
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_M_PCLMUL succeeded with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_56875 && [1/2] Building CXX object CMakeFiles/cmTC_56875.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_56875
+
+
+Source file was:
+int main() { return 0; }

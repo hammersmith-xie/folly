@@ -1,0 +1,144 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_f20fe && [1/2] Building C object CMakeFiles/cmTC_f20fe.dir/src.c.o
+[2/2] Linking C executable cmTC_f20fe
+FAILED: cmTC_f20fe 
+: && /bin/gcc  -rdynamic CMakeFiles/cmTC_f20fe.dir/src.c.o -o cmTC_f20fe   && :
+/usr/bin/ld: CMakeFiles/cmTC_f20fe.dir/src.c.o: in function `main':
+src.c:(.text+0x2d): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test FOLLY_STDLIB_LIBCXX failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_63c4f && [1/2] Building CXX object CMakeFiles/cmTC_63c4f.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_63c4f
+FAILED: cmTC_63c4f 
+: && /bin/g++ -std=gnu++1z -rdynamic CMakeFiles/cmTC_63c4f.dir/src.cxx.o -o cmTC_63c4f  -ldl  -pthread && :
+/usr/bin/ld: /lib/x86_64-linux-gnu/crt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+  #include <type_traits>
+  #if _LIBCPP_VERSION
+  int main() {}
+  #endif
+Performing C++ SOURCE FILE Test FOLLY_STDLIB_LIBCXX_GE_9 failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_8fcd3 && [1/2] Building CXX object CMakeFiles/cmTC_8fcd3.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_8fcd3
+FAILED: cmTC_8fcd3 
+: && /bin/g++ -std=gnu++1z -rdynamic CMakeFiles/cmTC_8fcd3.dir/src.cxx.o -o cmTC_8fcd3  -ldl  -pthread && :
+/usr/bin/ld: /lib/x86_64-linux-gnu/crt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+  #include <type_traits>
+  #if _LIBCPP_VERSION >= 9000
+  int main() {}
+  #endif
+Performing C++ SOURCE FILE Test FOLLY_STDLIB_LIBCPP failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_66e2f && [1/2] Building CXX object CMakeFiles/cmTC_66e2f.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_66e2f
+FAILED: cmTC_66e2f 
+: && /bin/g++ -std=gnu++1z -rdynamic CMakeFiles/cmTC_66e2f.dir/src.cxx.o -o cmTC_66e2f  -ldl  -pthread && :
+/usr/bin/ld: /lib/x86_64-linux-gnu/crt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+
+  #include <type_traits>
+  #if _CPPLIB_VER
+  int main() {}
+  #endif
+Determining if the include file jemalloc/jemalloc.h exists failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_bf93e && [1/2] Building CXX object CMakeFiles/cmTC_bf93e.dir/CheckIncludeFile.cxx.o
+FAILED: CMakeFiles/cmTC_bf93e.dir/CheckIncludeFile.cxx.o 
+/bin/g++ -D_GNU_SOURCE  -std=gnu++1z -pthread -o CMakeFiles/cmTC_bf93e.dir/CheckIncludeFile.cxx.o -c CheckIncludeFile.cxx
+CheckIncludeFile.cxx:1:10: fatal error: jemalloc/jemalloc.h: No such file or directory
+    1 | #include <jemalloc/jemalloc.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_UNKNOWN_WARNING_OPTION failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_3aed7 && [1/2] Building CXX object CMakeFiles/cmTC_3aed7.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_3aed7.dir/src.cxx.o 
+/bin/g++ -DCOMPILER_HAS_UNKNOWN_WARNING_OPTION  -std=gnu++1z   -Werror=unknown-warning-option -pthread -o CMakeFiles/cmTC_3aed7.dir/src.cxx.o -c src.cxx
+cc1plus: error: '-Werror=unknown-warning-option': no option '-Wunknown-warning-option'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_W_NULLABILITY_COMPLETENESS failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_ba1cd && [1/2] Building CXX object CMakeFiles/cmTC_ba1cd.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_ba1cd.dir/src.cxx.o 
+/bin/g++ -DCOMPILER_HAS_W_NULLABILITY_COMPLETENESS  -std=gnu++1z   -Wnullability-completeness -pthread -o CMakeFiles/cmTC_ba1cd.dir/src.cxx.o -c src.cxx
+g++: error: unrecognized command-line option '-Wnullability-completeness'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_W_INCONSISTENT_MISSING_OVERRIDE failed with the following output:
+Change Dir: /home/axexie/code/folly/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/ninja cmTC_d79c0 && [1/2] Building CXX object CMakeFiles/cmTC_d79c0.dir/src.cxx.o
+FAILED: CMakeFiles/cmTC_d79c0.dir/src.cxx.o 
+/bin/g++ -DCOMPILER_HAS_W_INCONSISTENT_MISSING_OVERRIDE  -std=gnu++1z   -Winconsistent-missing-override -pthread -o CMakeFiles/cmTC_d79c0.dir/src.cxx.o -c src.cxx
+g++: error: unrecognized command-line option '-Winconsistent-missing-override'
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+int main() { return 0; }

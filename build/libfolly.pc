@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libfolly
+Description: Facebook (Folly) C++ library
+Version: 0.58.0-dev
+Cflags: -I${includedir}  -pthread  -std=gnu++1z -DFMT_LOCALE -DFMT_SHARED -DBOOST_CONTEXT_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -DGFLAGS_IS_A_DLL=0 -I/usr/local/include -I/usr/local/openssl/include -I/usr/include
+Libs: -L${libdir} -lfolly
+Libs.private: /usr/local/lib/libdouble-conversion.so /usr/local/lib/libglog.so /usr/local/lib/libevent.so /usr/local/lib/libz.so /usr/local/openssl/lib/libssl.so /usr/local/openssl/lib/libcrypto.so /usr/lib/x86_64-linux-gnu/libbz2.so /usr/lib/x86_64-linux-gnu/liblzma.so /usr/local/lib/liblz4.so /usr/local/lib/libzstd.so /usr/lib/x86_64-linux-gnu/libsnappy.so -ldl
